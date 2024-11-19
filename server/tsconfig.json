@@ -1,0 +1,21 @@
+// server/tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist", // Output directory for compiled JavaScript
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+   "include": [
+    "./**/*.ts" // Include all TypeScript files
+  ],
+
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+     "dist"
+  ]
+}

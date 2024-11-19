@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+  font-family: sans-serif;
+  margin: 0; /* Remove default body margins */
+  padding: 0;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the app takes up the full viewport height */
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 days */
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto;
+  border-collapse: collapse; /* For table-like appearance */
+}
+
+.calendar .time-slot-header {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.calendar .day-header {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.calendar .time-slot {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 50px; /* Adjust height as needed */
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+
+/* Background image styling */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Necessary for the pseudo-element positioning */
+}
+
+.login-page::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./coffee-bean-bg.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px); /* Apply blur effect */
+  z-index: -1; /* Place the blurred background behind the content */
+  opacity: 0.8; /* Slight opacity for better contrast with content */
+}
+
+.login-container {
+  width: 80%; /* Adjusted for larger card size */
+  max-width: 600px; /* Max width to avoid too wide on large screens */
+  height: 88.5vh; /* Full height */
+  padding: 40px;
+  background: rgba(255, 248, 240, 0.9); /* Light coffee cream color */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold; /* Bolds all text inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content vertically and horizontally */
+  border-radius: 0px; /* Square edges */
+}
+
+.login-container h1 {
+  font-size: 50px; /* Larger font size */
+  font-family: 'DM Serif Display', serif; /* Modern and clean font */
+  color: #4b2e22; /* Dark coffee brown */
+  text-transform: uppercase; /* Optional: Makes the title uppercase */
+  letter-spacing: 2px; /* Space between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  margin-bottom: 0px;
+}
+
+.login-container h3 {
+  font-size: 18px; /* Smaller font size for h3 */
+  font-family: serif; /* Same font as h1 */
+  color: #6a4f42; /* Lighter coffee brown */
+  font-weight: lighter; /* Thinner text */
+  margin-bottom: 50px; /* Adds spacing below the h3 */
+  letter-spacing: 1px; /* Slight letter spacing */
+  text-transform: capitalize; /* Capitalizes first letter of each word */
+}
+
+/* Form fields */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between input fields */
+  width: 80%; /* Full width */
+}
+
+.form-group label {
+  font-size: 20px;
+  font-weight: bold; /* Bold text */
+  color: #6a4f42; /* Medium coffee brown */
+  margin-bottom: 8px;
+  text-align: left;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b49a85; /* Light coffee brown */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #4b2e22; /* Dark coffee brown */
+  background-color: #fdf8f5; /* Off-white, coffee cream background */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold; /* Bold input text */
+}
+
+/* Button styling */
+.login-button {
+  margin-top: 50px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #8b5e34; /* Rich coffee brown */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold; /* Bold button text */
+}
+
+.login-button:hover {
+  background-color: #6a4f42; /* Darker coffee brown */
+}
+
+/* Register link */
+.register-link {
+  margin-top: 20px;
+  display: block;
+  font-size: 14px;
+  color: #8b5e34; /* Rich coffee brown */
+  text-decoration: none;
+  font-weight: bold; /* Bold link text */
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
+/*Register Page*/
+
+
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+.table-bordered {
+    width: 80%; /* Or any width you prefer */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+  }
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6; /* Use Bootstrap's default border color */
+    padding: 0.75rem;
+    text-align: center; /* Center the text within cells */
+  }
+
+
+  .course-slot {
+    cursor: pointer;
+    background-color: lightgrey; /* Default: Grey */
+}
+
+.course-slot.available {
+    background-color: white; /* Available: White */
+}
+
+.course-slot.enrolled {
+  background-color: black; /* Enrolled: Black */
+  color: white;           /* Text color: White */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%; /* Slightly wider on small screens */
+    max-width: 500px; /* Max width to maintain readability */
+    padding: 30px; /* Adjust padding for smaller screens */
+    height: 91.3vh; /* Adjust height for smaller screens */
+    overflow: hidden;
+  }
+
+  .login-container h1 {
+    font-size: 40px; /* Adjust title size for smaller screens */
+  }
+
+  .login-container h3 {
+    font-size: 16px; /* Adjust h3 size for smaller screens */
+  }
+
+  .form-group input {
+    font-size: 14px; /* Smaller input text size */
+  }
+
+  .login-button {
+    font-size: 14px; /* Adjust button font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%; /* Almost full width on very small screens */
+    padding: 20px; /* Less padding on very small screens */
+    height: 94.2vh;
+  }
+
+  .login-container h1 {
+    font-size: 32px; /* Smaller title size */
+  }
+
+  .login-container h3 {
+    font-size: 14px; /* Smaller h3 text for mobile */
+  }
+
+  .form-group input {
+    font-size: 12px; /* Smaller input text size */
+  }
+
+  .login-button {
+    font-size: 12px; /* Smaller button text */
+  }
+}

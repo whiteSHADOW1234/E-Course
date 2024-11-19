@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        PORT: ${PORT}
+        MONGODB_URI: ${MONGODB_URI}
+        REACT_APP_AUTH_URL: ${REACT_APP_AUTH_URL}
+        REACT_APP_COURSE_URL: ${REACT_APP_COURSE_URL}  
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=${PORT}
+      - MONGODB_URI=${MONGODB_URI}
+      - REACT_APP_AUTH_URL=${REACT_APP_AUTH_URL}
+      - REACT_APP_COURSE_URL=${REACT_APP_COURSE_URL}
