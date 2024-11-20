@@ -46,7 +46,7 @@ const Calendar: React.FC<CalendarProps> = ({ user }) => {
         const fetchCourses = async () => {
             try {
                 const fetchedCourses: Course[] = await courseService.getAllCourses();
-                console.log('Fetched courses:', fetchedCourses);
+                // console.log('Fetched courses:', fetchedCourses);
 
                 const initialCourses = daysOfWeek
                     .map((_, dayIndex) =>
@@ -96,7 +96,7 @@ const Calendar: React.FC<CalendarProps> = ({ user }) => {
             setError(`Course not found for ${daysOfWeek[dayIndex]} at ${time12}.`);
             return;
         }
-        console.log('Course:', course);
+        // console.log('Course:', course);
         try {
             if (user.isAdmin) {
                 const updatedCourse = await courseService.updateCourseAvailability(
@@ -182,7 +182,7 @@ const Calendar: React.FC<CalendarProps> = ({ user }) => {
                                     }
                                 }
 
-                                console.log('Course:', course, 'Class name:', className, 'ClassNames:', course?.enrolledUser, course?.available);
+                                // console.log('Course:', course, 'Class name:', className, 'ClassNames:', course?.enrolledUser, course?.available);
 
                                 return (
                                     <td

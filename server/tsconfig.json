@@ -5,11 +5,22 @@
     "module": "commonjs",
     "outDir": "./dist", // Output directory for compiled JavaScript
     "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "@types/jest", "jest"]
   },
    "include": [
+    "src",
+    "__tests__/**/*",
+    "jest.setup.ts",
     "./**/*.ts" // Include all TypeScript files
   ],
 

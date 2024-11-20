@@ -35,7 +35,6 @@ const App: React.FC = () => {
   };
 
   return (
-    <Router>
       <div className="App">
         <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
@@ -50,7 +49,6 @@ const App: React.FC = () => {
           />
         </Routes>
       </div>
-    </Router>
   );
 };
 

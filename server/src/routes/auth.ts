@@ -68,10 +68,10 @@ router.post('/login', async (req: Request<{}, {}, LoginRequestBody>, res: Respon
 
     // Compare the provided password with the stored hashed password
     const passwordMatch = await bcrypt.compare(password, user.password);
-    if (!passwordMatch) {
-      console.log('Incorrect Password for user:', user.password);
-    //   return res.status(401).json({ message: 'Authentication failed' });
-    }
+    // if (!passwordMatch) {
+    //   console.log('Incorrect Password for user:', user.password);
+    // //   return res.status(401).json({ message: 'Authentication failed' });
+    // }
 
     // Authentication successful
     res.json({ 
