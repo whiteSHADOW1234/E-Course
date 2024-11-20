@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_AUTH_URL: ${{ secrets.REACT_APP_AUTH_URL }}
+      REACT_APP_COURSE_URL: ${{ secrets.REACT_APP_COURSE_URL }}
+      PORT: ${{ secrets.PORT }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
