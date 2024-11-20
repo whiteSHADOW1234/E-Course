@@ -1,6 +1,6 @@
 // client/src/App.tsx
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Calendar from './components/Calendar';
 import Login from './components/Login';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -17,6 +17,7 @@ interface User {
 const App: React.FC = () => {
   // State for the current user
   const [user, setUser] = useState<User | null>(null);
+  // const location = useLocation();
 
   useEffect(() => {
     const loggedInUser = authService.getCurrentUser() as User | null;
@@ -26,15 +27,20 @@ const App: React.FC = () => {
   }, []);
 
   const handleLogin = (user: User): void => {
+    console.log('App handleLogin: User logged in:', user);
     setUser(user);
   };
 
   const handleLogout = (): void => {
+    console.log('App handleLogout: User logging out...');
     authService.logout();
     setUser(null);
   };
+  console.log('App render: Current user:', user);
+  // console.log('App render: Current location:', location.pathname);
 
   return (
+    <Router>
       <div className="App">
         <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
@@ -49,6 +55,7 @@ const App: React.FC = () => {
           />
         </Routes>
       </div>
+    </Router>
   );
 };
 

@@ -16,6 +16,7 @@ interface RegisterResponse {
 
 // Register a new user
 const register = async (userData: User): Promise<RegisterResponse> => {
+  console.log('Start Registering User...');
   try {
     const response = await fetch(`${API_URL}/register`, {
       method: 'POST',

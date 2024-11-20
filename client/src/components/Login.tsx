@@ -15,9 +15,13 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+        console.log('Login handleLogin: Form submitted...');
         try {
+            console.log('Login handleLogin: Calling authService.login...');
             const user = await authService.login(username, password); // Call your login service
+            console.log('Login handleLogin: authService.login successful. User:', user);
             onLogin({ ...user, isAdmin: user.isAdmin ?? false }); // Ensure isAdmin is always a boolean
+            console.log('Login handleLogin: Navigating to /...');
             navigate("/");
 
         } catch (error) {
