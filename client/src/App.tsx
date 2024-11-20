@@ -37,10 +37,8 @@ const App: React.FC = () => {
     setUser(null);
   };
   console.log('App render: Current user:', user);
-  // console.log('App render: Current location:', location.pathname);
 
   return (
-    <Router>
       <div className="App">
         <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
@@ -55,7 +53,6 @@ const App: React.FC = () => {
           />
         </Routes>
       </div>
-    </Router>
   );
 };
 
