@@ -12,7 +12,7 @@ A simple course enrollment web application built with the MERN stack (MongoDB, E
   <a href="https://e-course-wuge.onrender.com/">Demo Link</a>
 </p>
 
-> *Note: The demo link uses Render's free plan and relies on other free online database hosting services, which may cause the website to go offline occasionally. If it's down, please wait a moment and refresh.*
+> *Note: The demo link uses Render's free plan and relies on other free online database hosting services, which may cause the website to go offline occasionally. **If it's down, please wait a moment and refresh.***
 ## Project Description
 
 This MERN stack application allows users to enroll in courses within a weekly schedule, with administrative controls for managing course availability.
