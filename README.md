@@ -1,7 +1,18 @@
 # E-Course Enrollment System
-
+<p align="center">
+  <img src="https://img.shields.io/badge/REACT->=18.3.1-lightgreen?style=for-the-badge" alt="React Badge" />
+  <img src="https://img.shields.io/badge/NODEJS->=20.18.0-green?style=for-the-badge" alt="NODEJS Badge" />
+  <img src="https://img.shields.io/badge/EXPRESSJS->=4.21.1-orange?style=for-the-badge" alt="Express Badge" />
+  <img src="https://img.shields.io/badge/Mongodb->=6.0-darkgreen?style=for-the-badge" alt="React Badge" />
+  <img src="https://img.shields.io/badge/DOCKER->=27.3.1-blue?style=for-the-badge" alt="Docker Badge" />
+</p>
 A simple course enrollment web application built with the MERN stack (MongoDB, Express, React, Node.js).
 
+<p align="center">
+  <a href="https://e-course-wuge.onrender.com/">Demo Link</a>
+</p>
+
+> *Note: The demo link uses Render's free plan and relies on other free online database hosting services, which may cause the website to go offline occasionally. If it's down, please wait a moment and refresh.*
 ## Project Description
 
 This MERN stack application allows users to enroll in courses within a weekly schedule, with administrative controls for managing course availability.
@@ -16,21 +27,13 @@ This MERN stack application allows users to enroll in courses within a weekly sc
 *   Backend built with TypeScript for improved type safety.
 *   Dockerized for easy deployment.
 
-## Technologies Used
-
-* **Frontend:** React, TypeScript, HTML, CSS, JavaScript
-* **Backend:** Node.js, Express.js, TypeScript, MongoDB
-* **Database:** MongoDB Atlas (or local MongoDB)
-* **Containerization:** Docker, Docker Compose
-* **Testing:** Jest
-* **CI/CD:** GitHub Actions
 
 ## Installation and Setup
 
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/mern-course-enrollment.git
+    git clone https://github.com/whiteSHADOW1234/E-Course.git
     ```
 
 2.  Install dependencies (in both client and server directories):
@@ -47,8 +50,7 @@ This MERN stack application allows users to enroll in courses within a weekly sc
 5.  Start the development servers:
 
     ```bash
-    cd client && npm start && cd ..
-    cd server && npm run dev && cd ..
+    cd server && npm start
     ```
 
 
@@ -62,14 +64,7 @@ This MERN stack application allows users to enroll in courses within a weekly sc
     docker-compose up -d --build
     ```
 
-The application will be accessible at `http://localhost:3000`.
-
-## Testing
-
-*   **Frontend:** `cd client && npm test`
-*   **Backend:** `cd server && npm test`
-
-
+The application will be accessible at `http://localhost:5000`.
 
 ## Contributing
 
