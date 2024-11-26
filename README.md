@@ -14,7 +14,8 @@ A user-friendly course enrollment web application built using the MERN stack (Mo
   <a href="https://e-course-wuge.onrender.com/" target="_blank"><strong>Live Demo</strong></a>
 </p>
 
-> *⚠️ Note: The demo uses Render's free hosting plan and external database services, which may cause occasional downtime. **If the site is unavailable, please wait a moment and refresh.***
+> [!NOTE]
+> *The demo uses Render's free hosting plan and external database services, which may cause occasional downtime. **If the site is unavailable, please wait a moment and refresh.***
 
 
 ## **📜 Project Description**
